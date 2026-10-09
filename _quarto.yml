@@ -1,27 +1,29 @@
 project:
   type: website
+  output-dir: docs
 
 website:
   title: "My test website"
   navbar:
     left:
-      - href: index.qmd
-        text: Home
+      - index.qmd
       - about.qmd
-      - href: ae01-unvotes.qmd
-        text: AE01
+      - text: "Assignments"
+        menu:
+          - ae01-unvotes.qmd
 
-siddebar:
-  stlye: "docked"
-  search: true
+  sidebar:
+    style: "docked"
+    search: true
+    contents:
+      - index.qmd
+      - about.qmd
+      - ae01-unvotes.qmd
 
 format:
   html:
     theme:
-      - darly
+      - darkly
       - brand
     css: styles.css
     toc: true
-
-
-
